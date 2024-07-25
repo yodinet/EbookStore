@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{ 
+  color: antiquewhite;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0,0,0;
+    --background-image: url("https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    --background-end-rgb: 225,225,225;
+  }
+}
+
+ body {
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background-image: url("https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") !important ;
+} 
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#log {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#log input[type="text"],
+#log input[type="password"],
+#log button {
+  width: 100%;
+  max-width: 15rem; /* Equivalent to max-w-md in Tailwind CSS */
+  padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 in Tailwind CSS */
+  border: 1px solid #e5e7eb; /* Equivalent to border border-gray-300 in Tailwind CSS */
+  border-radius: 0.375rem; /* Equivalent to rounded-md in Tailwind CSS */
+  margin-bottom: 1rem; /* Equivalent to mb-4 in Tailwind CSS */
+  outline: none; /* Remove default focus outline */
+}
+
+#log input[type="text"]:focus,
+#log input[type="password"]:focus,
+#log button:focus {
+  border-color: #2563eb; /* Change border color on focus */
+  box-shadow: 0 0 0 2px rgba(39, 124, 253, 0.5); /* Add blue focus ring */
+}
+
+#log button {
+  background-color: #2563eb; /* Equivalent to bg-blue-500 in Tailwind CSS */
+  color: #ffffff; /* Equivalent to text-white in Tailwind CSS */
+  font-weight: 700; /* Equivalent to font-bold in Tailwind CSS */
+  border-radius: 0.375rem; /* Equivalent to rounded in Tailwind CSS */
+}
+
+#log button:hover {
+  background-color: #49af1e; /* Equivalent to hover:bg-blue-700 in Tailwind CSS */
+}
+
+input[type="text"],
+input[type="password"] {
+  color: black;
+}
+
+#f {
+  font-family: 'Raleway', sans-serif; /* Specify the font family and fallback fonts */
+  font-weight: 200; /* Specify the font weight */
+  font-size: 45px; /* Increase the font size */
+  line-height: 4;
+}
+
